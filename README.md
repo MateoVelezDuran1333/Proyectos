@@ -22,30 +22,37 @@ git clone https://github.com/usuario/proyecto-modular.git
 cd proyecto-modular
 ```
 ### 2. Crear entorno virtual (opcional pero recomendado)
+```bash
 python -m venv venv
 source venv/bin/activate   # Linux / Mac
 venv\Scripts\activate      # Windows
+```
 
 ### 3. Instalar dependencias
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Descargar recursos adicionales
 
 El proyecto requiere algunos recursos externos:
 
  NLTK stopwords
+ ```bash
 import nltk
 nltk.download("stopwords")
+ ```
 
 Modelo de spaCy
+ ```bash
 python -m spacy download en_core_web_sm
+ ```
 
 ### Entrenamiento del modelo
 
 Si deseas reentrenar el modelo desde cero:
 
 python train.py
-
 
 El modelo entrenado se guarda en:
 
@@ -56,8 +63,9 @@ text_model.pkl
 #### 1. Modo script
 
 Puedes probar predicciones rápidas con:
-
+ ```bash
 python test.py
+ ```
 
 API con FastAPI
 Ejecutar servidor
